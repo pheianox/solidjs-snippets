@@ -2,10 +2,12 @@
   "name": "solidjs-snippets",
   "displayName": "solidjs-snippets",
   "description": "Snippets for SolidJS",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "publisher": "pheianox",
   "engines": {
     "vscode": "^1.74.0"
   },
+  "repository": "https://github.com/pheianox/solidjs-snippets",
   "categories": [
     "Snippets"
   ],
