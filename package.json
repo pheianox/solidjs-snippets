@@ -2,7 +2,7 @@
   "name": "solidjs-snippets",
   "displayName": "SolidJS Snippets",
   "description": "VSCode Snippets for SolidJS",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "publisher": "pheianox",
   "icon": "logo.png",
   "engines": {
