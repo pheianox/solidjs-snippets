@@ -4,6 +4,7 @@
   "description": "Snippets for SolidJS",
   "version": "1.0.0",
   "publisher": "pheianox",
+  "icon": "logo.png",
   "engines": {
     "vscode": "^1.74.0"
   },

@@ -2,22 +2,17 @@
 
 Snippet pack for SolidJS
 
-
 * [Signal](#signal)
 * [Store](#store)
 * [Context](#context)
 * [Mixed](#mixed)
 * [Component](#component)
 
-<br />
-
 ## Signal
 `si` - Signal
 ```ts
 const [signal, setSignal] = createSignal()
 ```
-
-<br />
 
 ## Store
 `st` - Store
@@ -30,8 +25,6 @@ interface Config {}
 
 const [config, setConfig] = createStore<Config>({})
 ```
-
-<br />
 
 ## Context
 `ctx` - Context
@@ -57,8 +50,6 @@ export const AppContextProvider: Component<AppContextProviderProps> = props => {
   return <AppContext.Provider value={context}>{props.children}</AppContext.Provider>
 }
 ```
-
-<br />
 
 ## Mixed
 `csa` - Context+State+Actions
@@ -88,8 +79,6 @@ export const AppProvider: Component<AppProviderProps> = props => {
   return <App.Provider value={[state, actions]}>{props.children}</App.Provider>
 }
 ```
-
-<br />
 
 ## Component
 `c` - Component
@@ -160,7 +149,5 @@ export const Navbar: Component<NavbarProps> = props => {
   )
 }
 ```
-
-<br />
 
 [Give a star on Github](https://github.com/pheianox/solidjs-snippets) if these snippets were useful
