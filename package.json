@@ -1,0 +1,20 @@
+{
+  "name": "solidjs-snippets",
+  "displayName": "solidjs-snippets",
+  "description": "Snippets for SolidJS",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "typescript",
+        "path": "./.vscode/snippets.code-snippets"
+      }
+    ]
+  }
+}
