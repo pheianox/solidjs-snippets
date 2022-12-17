@@ -1,3 +1,6 @@
+![logo](https://user-images.githubusercontent.com/77569421/208234847-cb9fdf5c-08b3-4ed8-a502-b0e6445a23a6.svg)
+
+
 # solidjs-snippets
 
 Snippet pack for SolidJS
