@@ -2,7 +2,7 @@
   "name": "solidjs-snippets",
   "displayName": "solidjs-snippets",
   "description": "Snippets for SolidJS",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "pheianox",
   "icon": "logo.png",
   "engines": {
