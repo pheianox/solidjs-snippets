@@ -20,20 +20,20 @@
   "contributes": {
     "snippets": [
       {
-        "language": "javascriptreact",
-        "path": "./.vscode/snippets.code-snippets"
-      },
-      {
         "language": "typescriptreact",
-        "path": "./.vscode/snippets.code-snippets"
+        "path": "./snippets/snippets.json"
       },
       {
         "language": "typescript",
-        "path": "./.vscode/snippets.code-snippets"
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/snippets.json"
       },
       {
         "language": "javascript",
-        "path": "./.vscode/snippets.code-snippets"
+        "path": "./snippets/snippets.json"
       }
     ]
   }
