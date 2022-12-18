@@ -8,6 +8,11 @@
   "engines": {
     "vscode": "^1.74.0"
   },
+  "keywords": [
+    "solid",
+    "snippets",
+    "solidjs"
+  ],
   "repository": "https://github.com/pheianox/solidjs-snippets",
   "categories": [
     "Snippets"
@@ -15,11 +20,19 @@
   "contributes": {
     "snippets": [
       {
-        "language": "typescript",
+        "language": "javascriptreact",
         "path": "./.vscode/snippets.code-snippets"
       },
       {
         "language": "typescriptreact",
+        "path": "./.vscode/snippets.code-snippets"
+      },
+      {
+        "language": "typescript",
+        "path": "./.vscode/snippets.code-snippets"
+      },
+      {
+        "language": "javascript",
         "path": "./.vscode/snippets.code-snippets"
       }
     ]
