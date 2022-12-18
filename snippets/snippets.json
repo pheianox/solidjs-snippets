@@ -1,0 +1,173 @@
+{
+    "Component": {
+        "prefix": "c",
+        "body": [
+            "const ${1:MyComponent}: Component = () => {",
+            "  return (",
+            "    <div>${1:MyComponent}</div>",
+            "  )",
+            "}",
+        ]
+    },
+    "Component+Props": {
+        "prefix": "cp",
+        "body": [
+            "interface ${1:MyComponent}Props {$2}",
+            "",
+            "const ${1:MyComponent}: Component<${1:MyComponent}Props> = props => {",
+            "  return (",
+            "    <div>${1:MyComponent}</div>",
+            "  )",
+            "}",
+        ]
+    },
+    "Import Component Export": {
+        "prefix": "ice",
+        "body": [
+            "import { Component } from \"solid-js\"",
+            "",
+            "const ${1:$TM_FILENAME_BASE}: Component = () => {",
+            "  return (",
+            "    <div>${1:$TM_FILENAME_BASE}</div>",
+            "  )",
+            "}",
+            "",
+            "export default ${1:$TM_FILENAME_BASE}"
+        ]
+    },
+    "Import Component+Props Export": {
+        "prefix": "icpe",
+        "body": [
+            "import { Component } from \"solid-js\"",
+            "",
+            "interface ${1:$TM_FILENAME_BASE}Props {$2}",
+            "",
+            "const ${1:$TM_FILENAME_BASE}: Component<${1:$TM_FILENAME_BASE}Props> = props => {",
+            "  return (",
+            "    <div>${1:$TM_FILENAME_BASE}</div>",
+            "  )",
+            "}",
+            "",
+            "export default ${1:$TM_FILENAME_BASE}"
+        ]
+    },
+    "Import Export Component": {
+        "prefix": "iec",
+        "body": [
+            "import { Component } from \"solid-js\"",
+            "",
+            "export const ${1:$TM_FILENAME_BASE}: Component = () => {",
+            "  return (",
+            "    <div>${1:$TM_FILENAME_BASE}</div>",
+            "  )",
+            "}",
+        ]
+    },
+    "Import Export Component+Props": {
+        "prefix": "iecp",
+        "body": [
+            "import { Component } from \"solid-js\"",
+            "",
+            "interface ${1:$TM_FILENAME_BASE}Props {$2}",
+            "",
+            "export const ${1:$TM_FILENAME_BASE}: Component<${1:$TM_FILENAME_BASE}Props> = props => {",
+            "  return (",
+            "    <div>${1:$TM_FILENAME_BASE}</div>",
+            "  )",
+            "}",
+        ]
+    },
+    "Signal" : {
+        "prefix": "si",
+        "body": [
+            "const [${1:signal}, set${1/(.*)/${1:/capitalize}/}] = createSignal($3)",
+        ]
+    },
+    "Store": {
+        "prefix": "st",
+        "body": [
+            "const [${1}, set${1/(.*)/${1:/capitalize}/}] = createStore($3)"
+        ]
+    },
+    "Store+Interface": {
+        "prefix": "sti", 
+        "body": [
+            "interface ${1/(.*)/${1:/capitalize}/} {",
+            "  $2",
+            "}",
+            "",
+            "const [${1}, set${1/(.*)/${1:/capitalize}/}] = createStore<${1/(.*)/${1:/capitalize}/}>({",
+            "  $3",
+            "})",
+        ]
+    },
+    "Context": {
+        "prefix": "ctx",
+        "body": [
+            "import { Component, createContext, JSXElement, useContext } from 'solid-js'",
+            "",
+            "interface ${1:MyContext} {",
+            "  $2",
+            "}",
+            "",
+            "interface ${1:MyContext}ProviderProps {",
+            "  children: JSXElement",
+            "}",
+            "",
+            "const ${1:MyContext} = createContext<${1:MyContext}>()",
+            "",
+            "export function use${1:MyContext}() {",
+            "  const context = useContext(${1:MyContext})",
+            "  if (!context) throw new Error(`Context '${1:MyContext}' is null. Did you use <${1:MyContext}Provider>?`)",
+            "  return context",
+            "}",
+            "",
+            "export const ${1:MyContext}Provider: Component<${1:MyContext}ProviderProps> = props => {",
+            "  const context: ${1:MyContext}= { }",
+            "  return <${1:MyContext}.Provider value={context}>{props.children}</${1:MyContext}.Provider>",
+            "}",
+
+        ]
+    },
+    "Context+State+Actions": {
+        "prefix": "csa",
+        "body": [
+            "import { Component, createContext, JSXElement, useContext } from 'solid-js'",
+            "import { createStore } from 'solid-js/store'",
+            "",
+            "interface ${1:MyContext}State {",
+            "  $2",
+            "}",
+            "",
+            "interface ${1:MyContext}Actions {",
+            "  $3",
+            "}",
+            "",
+            "interface ${1:MyContext}ProviderProps {",
+            "  children: JSXElement",
+            "}",
+            "",
+            "const ${1:MyContext} = createContext<[${1:MyContext}State, ${1:MyContext}Actions]>()",
+            "",
+            "export function use${1:MyContext}() {",
+            "  const context = useContext(${1:MyContext})",
+            "  if (!context) throw new Error(`Context '${1:MyContext}' is null. Did you use <${1:MyContext}Provider>?`)",
+            "  return context",
+            "}",
+            "",
+            "export const ${1:MyContext}Provider: Component<${1:MyContext}ProviderProps> = props => {",
+            "  const [state, setState] = createStore<${1:MyContext}State>({$4})",
+            "  const actions: ${1:MyContext}Actions = {$5}",
+            "  return <${1:MyContext}.Provider value={[state, actions]}>{props.children}</${1:MyContext}.Provider>",
+            "}",
+        ]
+    },
+    "<For>": {
+        "prefix": "f",
+        "body": [
+            "<For each={${1:array}}>",
+            "  {${2:item} => $3}",
+            "</For>"
+        ]
+    },
+}
