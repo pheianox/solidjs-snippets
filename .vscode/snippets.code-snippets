@@ -118,7 +118,7 @@
             "",
             "export function use${1:MyContext}() {",
             "  const context = useContext(${1:MyContext})",
-            "  if (!context) throw new Error(`Context '${1:MyContext}' is null. Assure usage of <${1:MyContext}Provider>`)",
+            "  if (!context) throw new Error(`Context '${1:MyContext}' is null. Did you use <${1:MyContext}Provider>?`)",
             "  return context",
             "}",
             "",
