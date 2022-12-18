@@ -1,4 +1,4 @@
-![logo](https://user-images.githubusercontent.com/77569421/208234847-cb9fdf5c-08b3-4ed8-a502-b0e6445a23a6.svg)
+![logo (2)](https://user-images.githubusercontent.com/77569421/208286797-5504ee76-ea96-4736-8b9f-4080a14f0ba9.png)
 
 
 # solidjs-snippets
