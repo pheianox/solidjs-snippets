@@ -17,6 +17,10 @@
       {
         "language": "typescript",
         "path": "./.vscode/snippets.code-snippets"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./.vscode/snippets.code-snippets"
       }
     ]
   }
