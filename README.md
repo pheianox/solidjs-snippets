@@ -178,7 +178,9 @@ export const Navbar: Component = () => {
   )
 }
 ```
+
 `iecp` - Import Export Component+Props
+
 ```ts
 import { Component } from "solid-js"
 
@@ -189,6 +191,16 @@ export const Navbar: Component<NavbarProps> = props => {
     <div>Navbar</div>
   )
 }
+```
+
+`f` - SolidJS <For> Component
+
+```ts
+...
+  <For each={array}>
+    {item => <Item item={item}}
+  </For>
+...
 ```
 
 [Give a star on Github](https://github.com/pheianox/solidjs-snippets) if these snippets were useful
