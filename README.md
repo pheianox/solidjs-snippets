@@ -193,7 +193,7 @@ export const Navbar: Component<NavbarProps> = props => {
 }
 ```
 
-`f` - SolidJS <For> Component
+`f` - SolidJS For Component
 
 ```ts
 ...
