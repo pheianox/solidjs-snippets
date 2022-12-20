@@ -3,7 +3,10 @@
 
 # solidjs-snippets
 
-Snippet pack for SolidJS
+VSCode snippets for SolidJS
+
+Creates automatic boilplates with ability to configure
+
 
 * [Signal](#signal)
 * [Store](#store)
@@ -12,22 +15,31 @@ Snippet pack for SolidJS
 
 ## Signal
 `si` - Signal
+
 ```ts
 const [signal, setSignal] = createSignal()
 ```
 
 ## Store
+
 `st` - Store
+
 ```ts
 const [store, setStore] = createStore({})
 ```
+
 `sti` - Store+Interface
+
 ```ts
 interface Config {}
 
 const [config, setConfig] = createStore<Config>({})
 ```
+
 `sta` - Store+Actions
+
+Ready to be used state management system
+
 ```ts
 import { createStore } from 'solid-js/store'
 
@@ -42,7 +54,11 @@ export default { state, actions }
 ```
 
 ## Context
+
 `ctx` - Context
+
+Context with provider and custom hook
+
 ```ts
 import { Component, createContext, JSXElement, useContext } from 'solid-js'
 
@@ -65,7 +81,11 @@ export const AppContextProvider: Component<AppContextProviderProps> = props => {
   return <AppContext.Provider value={context}>{props.children}</AppContext.Provider>
 }
 ```
+
 `ctxsta` - Context+Store+Actions
+
+Ready to be useed state management system with its own context
+
 ```ts
 import { Component, createContext, JSXElement, useContext } from 'solid-js'
 import { createStore } from 'solid-js/store'
@@ -94,7 +114,9 @@ export const AppProvider: Component<AppProviderProps> = props => {
 ```
 
 ## Component
+
 `c` - Component
+
 ```ts
 const Navbar: Component = () => {
   return (
@@ -102,7 +124,9 @@ const Navbar: Component = () => {
   )
 }
 ```
+
 `cp` - Component+Props
+
 ```ts
 interface NavbarProps {}
 
@@ -112,7 +136,9 @@ const Navbar: Component<NavbarProps> = props => {
   )
 }
 ```
+
 `ice` - Import Component Export
+
 ```ts
 import { Component } from "solid-js"
 
@@ -124,7 +150,9 @@ const Navbar: Component = () => {
 
 export default Navbar
 ```
+
 `icpe` - Import Component+Props Export
+
 ```ts
 import { Component } from "solid-js"
 
@@ -138,7 +166,9 @@ const Navbar: Component<NavbarProps> = props => {
 
 export default Navbar
 ```
+
 `iec` - Import Export Component
+
 ```ts
 import { Component } from "solid-js"
 
