@@ -102,7 +102,7 @@
         ]
     },
     "Store+Actions": {
-        "prefix": "sa",
+        "prefix": "sta",
         "body": [
             "import { createStore } from 'solid-js/store'",
             "",
@@ -149,7 +149,7 @@
         ]
     },
     "Context+Store+Actions": {
-        "prefix": "csa",
+        "prefix": "ctxsta",
         "body": [
             "import { Component, createContext, JSXElement, useContext } from 'solid-js'",
             "import { createStore } from 'solid-js/store'",
