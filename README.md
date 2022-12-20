@@ -3,15 +3,15 @@
 
 # solidjs-snippets
 
-VSCode snippets for SolidJS
+> VSCode extension. Typescript first support
 
-Creates automatic boilplates with ability to configure
-
+Automatic typed boilplates for fat and lazy devs 
 
 * [Signal](#signal)
 * [Store](#store)
 * [Context](#context)
 * [Component](#component)
+
 
 ## Signal
 `si` - Signal
