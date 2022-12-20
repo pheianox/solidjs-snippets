@@ -27,7 +27,7 @@ interface Config {}
 
 const [config, setConfig] = createStore<Config>({})
 ```
-`sa` - Store+Actions
+`sta` - Store+Actions
 ```ts
 import { createStore } from 'solid-js/store'
 
@@ -65,7 +65,7 @@ export const AppContextProvider: Component<AppContextProviderProps> = props => {
   return <AppContext.Provider value={context}>{props.children}</AppContext.Provider>
 }
 ```
-`csa` - Context+Store+Actions
+`ctxsta` - Context+Store+Actions
 ```ts
 import { Component, createContext, JSXElement, useContext } from 'solid-js'
 import { createStore } from 'solid-js/store'
@@ -142,13 +142,11 @@ export default Navbar
 ```ts
 import { Component } from "solid-js"
 
-const Navbar: Component = () => {
+export const Navbar: Component = () => {
   return (
     <div>Navbar</div>
   )
 }
-
-export default Navbar
 ```
 `iecp` - Import Export Component+Props
 ```ts
