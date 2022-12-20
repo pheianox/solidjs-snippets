@@ -8,7 +8,6 @@ Snippet pack for SolidJS
 * [Signal](#signal)
 * [Store](#store)
 * [Context](#context)
-* [Mixed](#mixed)
 * [Component](#component)
 
 ## Signal
@@ -66,9 +65,7 @@ export const AppContextProvider: Component<AppContextProviderProps> = props => {
   return <AppContext.Provider value={context}>{props.children}</AppContext.Provider>
 }
 ```
-
-## Mixed
-`csa` - Context+State+Actions
+`csa` - Context+Store+Actions
 ```ts
 import { Component, createContext, JSXElement, useContext } from 'solid-js'
 import { createStore } from 'solid-js/store'
