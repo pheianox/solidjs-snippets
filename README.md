@@ -28,6 +28,19 @@ interface Config {}
 
 const [config, setConfig] = createStore<Config>({})
 ```
+`sa` - Store+Actions
+```ts
+import { createStore } from 'solid-js/store'
+
+interface AppState {}
+
+interface AppActions {}
+
+const [state, setState] = createStore<AppState>({})
+const actions: AppActions = {}
+
+export default { state, actions }
+```
 
 ## Context
 `ctx` - Context
@@ -44,7 +57,7 @@ const AppContext = createContext<AppContext>()
 
 export function useAppContext() {
   const context = useContext(AppContext)
-  if (!context) throw new Error(`Context 'AppContext' is null. Assure usage of <AppContextProvider>`)
+  if (!context) throw new Error(`Context 'AppContext' is null. Did you use <AppContextProvider>?`)
   return context
 }
 

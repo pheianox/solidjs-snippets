@@ -6,7 +6,7 @@
             "  return (",
             "    <div>${1:MyComponent}</div>",
             "  )",
-            "}",
+            "}"
         ]
     },
     "Component+Props": {
@@ -18,7 +18,7 @@
             "  return (",
             "    <div>${1:MyComponent}</div>",
             "  )",
-            "}",
+            "}"
         ]
     },
     "Import Component Export": {
@@ -60,7 +60,7 @@
             "  return (",
             "    <div>${1:$TM_FILENAME_BASE}</div>",
             "  )",
-            "}",
+            "}"
         ]
     },
     "Import Export Component+Props": {
@@ -74,13 +74,13 @@
             "  return (",
             "    <div>${1:$TM_FILENAME_BASE}</div>",
             "  )",
-            "}",
+            "}"
         ]
     },
     "Signal" : {
         "prefix": "si",
         "body": [
-            "const [${1:signal}, set${1/(.*)/${1:/capitalize}/}] = createSignal($3)",
+            "const [${1:signal}, set${1/(.*)/${1:/capitalize}/}] = createSignal($3)"
         ]
     },
     "Store": {
@@ -98,7 +98,26 @@
             "",
             "const [${1}, set${1/(.*)/${1:/capitalize}/}] = createStore<${1/(.*)/${1:/capitalize}/}>({",
             "  $3",
-            "})",
+            "})"
+        ]
+    },
+    "Store+Actions": {
+        "prefix": "sa",
+        "body": [
+            "import { createStore } from 'solid-js/store'",
+            "",
+            "interface ${1:MyContext}State {",
+            "  $2",
+            "}",
+            "",
+            "interface ${1:MyContext}Actions {",
+            "  $3",
+            "}",
+            "",
+            "const [state, setState] = createStore<${1:MyContext}State>({$4})",
+            "const actions: ${1:MyContext}Actions = {$5}",
+            "",
+            "export default { state, actions }"
         ]
     },
     "Context": {
@@ -125,11 +144,11 @@
             "export const ${1:MyContext}Provider: Component<${1:MyContext}ProviderProps> = props => {",
             "  const context: ${1:MyContext}= { }",
             "  return <${1:MyContext}.Provider value={context}>{props.children}</${1:MyContext}.Provider>",
-            "}",
+            "}"
 
         ]
     },
-    "Context+State+Actions": {
+    "Context+Store+Actions": {
         "prefix": "csa",
         "body": [
             "import { Component, createContext, JSXElement, useContext } from 'solid-js'",
@@ -159,7 +178,7 @@
             "  const [state, setState] = createStore<${1:MyContext}State>({$4})",
             "  const actions: ${1:MyContext}Actions = {$5}",
             "  return <${1:MyContext}.Provider value={[state, actions]}>{props.children}</${1:MyContext}.Provider>",
-            "}",
+            "}"
         ]
     },
     "<For>": {
@@ -169,5 +188,5 @@
             "  {${2:item} => $3}",
             "</For>"
         ]
-    },
+    }
 }
