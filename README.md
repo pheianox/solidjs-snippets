@@ -204,3 +204,6 @@ export const Navbar: Component<NavbarProps> = props => {
 ```
 
 [Give a star on Github](https://github.com/pheianox/solidjs-snippets) if these snippets were useful
+
+Fell free to give us useful snippet ideas by creating an issue
+
